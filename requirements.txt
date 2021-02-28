@@ -29,7 +29,6 @@ Markdown==3.3.3
 multidict==5.0.0
 numpy==1.16.5
 openpyxl==3.0.6
-pandas==1.2.2
 protobuf==3.15.1
 PyMySQL==1.0.2
 pypng==0.0.20
