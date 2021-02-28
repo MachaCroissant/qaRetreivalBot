@@ -5,7 +5,6 @@ import numpy as np
 import jieba
 import time
 import re
-import json
 
 start_time = time.time()
 
@@ -71,9 +70,5 @@ if __name__ == "__main__":
          {'question': '阿里巴巴企业', 'answer': 'B2C-企业-阿里巴巴'},
          {'question': '阿里巴巴开发商', 'answer': '淘宝助理-开发商-阿里巴巴'}]
     model = BM25Recall(a)
-    with open("redis.json", 'r') as f:
-        b = json.load(f)
-    model2 = BM25Recall(b)
 
     print(model.recall("助理", 1))
-    print(model2.recall("客户信息验证页签名错误", 1))
