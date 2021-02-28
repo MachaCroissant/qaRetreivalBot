@@ -62,7 +62,6 @@ class Config:
         return top_n_one, top_n_recall_sort
 
     def duplicate_response(self, duplicate_q):
-        if len(len(duplicate_q) >= 3):
-            res = np.random.choice(self.duplicate_txt)
-            top_n_one = {'question': '重复文字', 'answer': res, 'sim_rate': 0.0}
-            return top_n_one, []
+        res = np.random.choice(self.duplicate_txt)
+        top_n_one = {'question': '重复文字', 'answer': res, 'sim_rate': 0.0}
+        return top_n_one, []

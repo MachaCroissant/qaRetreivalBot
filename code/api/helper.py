@@ -53,3 +53,7 @@ if __name__ == '__main__':
     server = Server()
     data = {"request_id": "ExamServer", "query": "pad黑屏了怎么办啊"}
     print("\n The result is ", server.get_result(data))
+    data = {"request_id": "ExamServer", "query": "pad黑屏了怎么办啊"}
+    print("\n The result is ", server.get_result(data))
+    data = {"request_id": "ExamServer", "query": "pad黑屏了怎么办啊"}
+    print("\n The result is ", server.get_result(data))
