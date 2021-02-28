@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/retrieve_match" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/retrieve_match/bm25" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/retrieve_match/bool" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/retrieve_match/simbert" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/api" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/retrieve_match/model_config" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.7 (myChatbot)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
