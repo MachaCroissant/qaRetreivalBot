@@ -5,11 +5,13 @@ import time
 from sanic.exceptions import NotFound
 from sanic.response import text
 from helper import Server
+from sanic_cors import CORS
 
 myServer = Server()
 
 app = Sanic(__name__)
-ip, port = "127.0.0.1", 9010
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
+
 
 
 @app.exception(NotFound)
@@ -17,12 +19,12 @@ async def url_404(request, excep):
     return response.json({"Error": excep})
 
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'OPTIONS'])
 async def testfunc(request):
-    return text("你想从我这里获得什么消息呢？")
+    return text("哈喽，请问你需要什么帮助呢？")
 
 
-@app.route('/QA', methods=['POST'])
+@app.route('/QA', methods=['POST', 'OPTIONS'])
 async def model_server(request):
     try:
         json_bytes = request.body
@@ -33,8 +35,8 @@ async def model_server(request):
         print('耗时：', time.time()-start_time)
     except Exception as e:
         result = {"code": 400, "message": "预测失败", "Error": e}
-    return response.json(result)
+    return response.json(result, headers={"Access-Control-Allow-Origin": "*"})
 
 
 if __name__ == '__main__':
-    app.run(host=ip, port=port, debug=True)
+    app.run(debug=True)
