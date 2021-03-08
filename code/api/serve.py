@@ -10,7 +10,7 @@ from sanic_cors import CORS
 myServer = Server()
 
 app = Sanic(__name__)
-cors = CORS(app, resources={r"/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:5501"}})
 
 
 
@@ -35,7 +35,7 @@ async def model_server(request):
         print('耗时：', time.time()-start_time)
     except Exception as e:
         result = {"code": 400, "message": "预测失败", "Error": e}
-    return response.json(result, headers={"Access-Control-Allow-Origin": "*"})
+    return response.json(result)
 
 
 if __name__ == '__main__':
