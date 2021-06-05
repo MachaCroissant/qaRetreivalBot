@@ -24,9 +24,9 @@ Web与小程序页面可以在forntend文件夹中分别找到。
 
 云服务器的Web部署如下图。
 
-<img src="./pics/1.png" alt="截屏2021-06-05 下午11.33.39" style="zoom:50%;" />
+<img src="./pics/1.png" alt="截屏2021-06-05 下午11.33.39" style="zoom:30%;" />
 
 微信开发工具中测试界面如下，未实际部署到微信。
 
-<img src="./pics/2.png" alt="截屏2021-06-05 下午11.33.39" style="zoom:50%;" />
+<img src="./pics/2.png" alt="截屏2021-06-05 下午11.33.39" style="zoom:30%;" />
 
