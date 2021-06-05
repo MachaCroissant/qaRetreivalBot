@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+/* bot回复的loading动效 */
+.dot-elastic {
+  position: relative;
+  margin: 5px 30px 0 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #325575;
+  color: #325575;
+  -webkit-animation: dot-elastic 1s infinite linear;
+  animation: dot-elastic 1s infinite linear;
+}
+
+.dot-elastic::before, .dot-elastic::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-elastic::before {
+  left: -15px;
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #325575;
+  color: #325575;
+  -webkit-animation: dot-elastic-before 1s infinite linear;
+  animation: dot-elastic-before 1s infinite linear;
+}
+
+.dot-elastic::after {
+  left: 15px;
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #325575;
+  color: #325575;
+  -webkit-animation: dot-elastic-after 1s infinite linear;
+  animation: dot-elastic-after 1s infinite linear;
+}
+
+@-webkit-keyframes dot-elastic-before {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1.5);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dot-elastic-before {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1.5);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes dot-elastic {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 1.5);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dot-elastic {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 1.5);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes dot-elastic-after {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dot-elastic-after {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, Helvetica,
+  sans-serif;
+  background-color: rgba(223, 242, 247, .5);
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 标题输入动效 */
+.headline {
+  height: 20%;
+}
+h1 {
+  font: bold 200% monospace;
+  border-right: 0.1em solid;
+  width: 17.5em;
+  
+  margin-left: 5%;
+  margin-top: 5%;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(25, end),
+      cursor-blink 0.3s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+}
+
+@keyframes cursor-blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+
+span {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+
+.chat {
+  height: 80%;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  border: 0;
+  padding: 15px;
+  margin-left: 35%;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px grey;
+  width: 35%;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  height: 90%;
+  width: 70%;
+  background-color: rgba(115, 177, 194, 0.5);
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px grey
+}
+
+#bot {
+  margin-left: auto;
+  padding-left: 50%;
+}
+
+.bot {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.avatar {
+  height: 25px;
+}
+
+.response {
+  display: flex;
+  align-items: end;
+  margin: 1%;
+}
+
+
+@media only screen and (max-width: 980px) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .chat {
+    width: 75vw;
+    margin: 10vw;
+  }
+}
