@@ -9,7 +9,12 @@ CORS(app)
 myServer = Server()
 
 
-@app.route('/', methods=['GET'])
+@app.route('/')
+def hello():
+    return 'hello,world'
+
+
+@app.route('/test', methods=['GET'])
 def testfunc():
     question = str(request.args['ques'])
     query_dict = {"request_id": 'ExamServer', "query": question}
@@ -35,4 +40,4 @@ def testfunc():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='127.0.0.1', port=8080, debug=app.config['DEBUG'])

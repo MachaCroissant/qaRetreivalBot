@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a214d46a-760f-4a8f-a052-9ea46f99e781" name="test" url="http://121.4.67.30">
+        <fileTransfer rootFolder="/home/myChatbot" accessType="SFTP" host="121.4.67.30" port="22" sshConfigId="5e831ed4-758e-4faa-9843-1c0c6cb7c930" sshConfig="test" keyPair="true" />
+      </webServer>
+      <webServer id="ee716af7-8686-4b15-982d-dfb8675104a0" name="all" url="http://121.4.67.30">
+        <fileTransfer accessType="SFTP" host="121.4.67.30" port="22" sshConfigId="5e831ed4-758e-4faa-9843-1c0c6cb7c930" sshConfig="test" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

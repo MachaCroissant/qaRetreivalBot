@@ -136,3 +136,7 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# ignore bert models
+code/retrieve_match/simbert/config/chinese_L-12_H-768_A-12
+code/retrieve_match/simbert/config/chinese_simbert_L-12_H-768_A-12
